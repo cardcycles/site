@@ -10,7 +10,7 @@
   if (proofLabel) D.proof = proofLabel.textContent;
   var SANS = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
   var MONO = 'ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace';
-  var INK = '#15171B', GRAPHITE = '#5A5F66', HAIR = '#D9D6CF', INDIGO = '#2E3F73';
+  var INK = '#15171D', GRAPHITE = '#595E6B', HAIR = '#D5D2DC', INDIGO = '#3E4679', GOLD = '#896727';
   function wrap(g, text, maxW) {
     var words = text.split(' '), lines = [], line = '';
     for (var i = 0; i < words.length; i++) {
@@ -34,13 +34,10 @@
   }
   function draw() {
     var W = 1200, H = 630, cv = document.createElement('canvas');
-    cv.width = W; cv.height = H;
-    var g = cv.getContext('2d');
+    cv.width = W * 2; cv.height = H * 2;
+    var g = cv.getContext('2d'); g.scale(2, 2);
     g.fillStyle = '#F5F3EE'; g.fillRect(0, 0, W, H);
     g.fillStyle = '#FBFAF7'; g.fillRect(64, 72, 340, 438);
-    g.fillStyle = INDIGO; g.fillRect(64, 72, 8, 438);
-    g.fillStyle = INDIGO; g.fillRect(64, 72, 24, 2); g.fillRect(64, 72, 2, 24); g.fillRect(380, 508, 24, 2); g.fillRect(402, 486, 2, 24);
-    text(g, D.kicker, 96, 132, '600 ', 18, GRAPHITE);
     text(g, 'ENTRY', 96, 224, '600 ', 26, INK);
     text(g, D.seq4, 96, 324, '600 ', 76, INDIGO, MONO);
     text(g, D.pos, 96, 380, '', 22, GRAPHITE);
@@ -53,7 +50,7 @@
     /* The week position belongs to the entry panel. */
     text(g, D.sealed, X, 232, '', 22, INK);
     var pf = fit(g, D.proof, '', 22, 18, SANS, MW, 1);
-    text(g, pf.lines[0], X, 268, '', pf.size, GRAPHITE);
+    text(g, pf.lines[0], X, 268, '', pf.size, D.proof_complete ? GOLD : GRAPHITE);
     var mk = fit(g, D.market, '600 ', 26, 20, SANS, MW, 2), y = 318;
     for (var l = 0; l < mk.lines.length; l++) { text(g, mk.lines[l], X, y, '600 ', mk.size, INK); y += 34; }
     if (D.interest) {
