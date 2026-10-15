@@ -1,0 +1,873 @@
+{
+ "schema": "cycle-record-list/1",
+ "generated_on": "2026-10-15",
+ "note": "The Cycle Record. Each entry's fingerprint is the SHA-256 of record/NNNN/entry.json. Anyone may keep copies.",
+ "disclaimer": "CardCycles provides educational market analytics and risk intelligence, not financial, investment, tax, or legal advice. CardCycles is unofficial and is not affiliated with The Pokémon Company, Nintendo, Creatures, or Game Freak.",
+ "entries": [
+  {
+   "schema": "cycle-record-envelope/1",
+   "seq": 2,
+   "entry": {
+    "corrects": null,
+    "missed_weeks": [],
+    "notes": [
+     "INSUFFICIENT_DATA"
+    ],
+    "prev_chain_hash": "e92ca30642fe61edc7937ac8ff898393127169dd6170257ff1f2fa86a7e859ca",
+    "schema": "cycle-record/1",
+    "sealed_at": "2026-10-12T23:49:56Z",
+    "sealed_items": [
+     {
+      "label": "Sealed item A",
+      "sha256": "5a873132c262552edae9fe9a5386cc9a5e12fcd8c30064e35eb6f3637830a9e8"
+     },
+     {
+      "label": "Sealed item B",
+      "sha256": "84e7ce2672b37d5dac79de3965e0e8b3b5c22c9598781c3cd5a17613fef06e37"
+     },
+     {
+      "label": "Sealed item C",
+      "sha256": "29abf4118e58aff85bc693cbcd91a30fd5dcb8ff6dfd2c641b4347698cc7c0ca"
+     },
+     {
+      "label": "Private seal",
+      "sha256": "1807fcdfd105f56ba0a2bf295c23df976798a83d097a54ab7c52fc052d54e36f"
+     }
+    ],
+    "seq": 2,
+    "week_start": "2026-10-12"
+   },
+   "entry_hash": "946d1b678290f0a15f74ef232e7c5e36395bda66901f118af7fcc98cce5de122",
+   "chain_hash": "62bac39e300ef04cd69efe4ac9a2da80d58191d60eb5d0f87b7a8dd004372904",
+   "public_context": {
+    "public_interest": {
+     "item": "Sealed item A",
+     "opened": {
+      "content": {
+       "agent": "user",
+       "article": "Pokémon Trading Card Game",
+       "avg_daily_views": 990,
+       "change_pct": "+25.3",
+       "compare_avg_daily_views": 790,
+       "compare_month": "2025-09",
+       "data_through": "2026-10-11",
+       "license": "CC0",
+       "month": "2026-09",
+       "project": "en.wikipedia",
+       "reading": "public_interest",
+       "source": "Wikimedia pageviews"
+      },
+      "salt": "92c04d0f475fe27230b62101f2038a9e7bc3a1bbbe2a7bb374589c7a38f355f0"
+     },
+     "publication_status": "published"
+    }
+   },
+   "timestamp_proof": {
+    "file": "entry.json.ots",
+    "state": "complete",
+    "requested_on": "2026-10-15",
+    "completed_on": "2026-10-15",
+    "verified_on": "2026-10-15",
+    "attested_at": "2026-10-15T07:36:21Z",
+    "pending_reason": null,
+    "verification": "verified",
+    "entry_sha256": "946d1b678290f0a15f74ef232e7c5e36395bda66901f118af7fcc98cce5de122",
+    "proof_sha256": "05e23724b8aa4263d282e0debded769920577cae7b388b2dcf6651cf4c5a6150"
+   },
+   "study": [],
+   "disclaimer": "CardCycles provides educational market analytics and risk intelligence, not financial, investment, tax, or legal advice. CardCycles is unofficial and is not affiliated with The Pokémon Company, Nintendo, Creatures, or Game Freak."
+  },
+  {
+   "schema": "cycle-record-envelope/1",
+   "seq": 1,
+   "entry": {
+    "corrects": null,
+    "missed_weeks": [],
+    "notes": [
+     "INSUFFICIENT_DATA"
+    ],
+    "prev_chain_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "schema": "cycle-record/1",
+    "sealed_at": "2026-10-10T04:38:06Z",
+    "sealed_items": [
+     {
+      "label": "Sealed item A",
+      "sha256": "8e64f1c2c6a3c3e898cbbf084792079694ec8d0432508beb93273a6163ed4d8c"
+     },
+     {
+      "label": "Sealed item B",
+      "sha256": "84301ff75bf97bb41db7dbd22210eaaca0537d81415ff0b273316ed6f2341f1c"
+     },
+     {
+      "label": "Sealed item C",
+      "sha256": "82d9bc64d85e2c1e5864a6a624c016760728ebd614f2cb252cffafd3ab8162d6"
+     },
+     {
+      "label": "Private seal",
+      "sha256": "75cbd80630d304373eec5b7ebedbfccf03fecac1dc8bb91e2d2276078c35b51a"
+     }
+    ],
+    "seq": 1,
+    "week_start": "2026-10-05"
+   },
+   "entry_hash": "59b3f4701f1de341bc0e50365e61bdf2fc36d77486db71a449a357c83b739267",
+   "chain_hash": "e92ca30642fe61edc7937ac8ff898393127169dd6170257ff1f2fa86a7e859ca",
+   "public_context": {
+    "public_interest": {
+     "item": "Sealed item A",
+     "opened": {
+      "content": {
+       "agent": "user",
+       "article": "Pokémon Trading Card Game",
+       "avg_daily_views": 990,
+       "change_pct": "+25.3",
+       "compare_avg_daily_views": 790,
+       "compare_month": "2025-09",
+       "data_through": "2026-10-04",
+       "license": "CC0",
+       "month": "2026-09",
+       "project": "en.wikipedia",
+       "reading": "public_interest",
+       "source": "Wikimedia pageviews"
+      },
+      "salt": "8857cacdd11a14c20c9dd4fa6969ff2e22408198065b0799d63d8a207fc62cd7"
+     },
+     "publication_status": "published"
+    }
+   },
+   "timestamp_proof": {
+    "file": "entry.json.ots",
+    "state": "complete",
+    "requested_on": "2026-10-15",
+    "completed_on": "2026-10-15",
+    "verified_on": "2026-10-15",
+    "attested_at": "2026-10-15T07:36:21Z",
+    "pending_reason": null,
+    "verification": "verified",
+    "entry_sha256": "59b3f4701f1de341bc0e50365e61bdf2fc36d77486db71a449a357c83b739267",
+    "proof_sha256": "d46c3908dde1b461383731539d567570aa58a23b5088246fa91fe1ef5a5e0c1b"
+   },
+   "study": [],
+   "disclaimer": "CardCycles provides educational market analytics and risk intelligence, not financial, investment, tax, or legal advice. CardCycles is unofficial and is not affiliated with The Pokémon Company, Nintendo, Creatures, or Game Freak."
+  }
+ ],
+ "opening_events": [
+  {
+   "entry_seq": 1,
+   "event_seq": 1,
+   "first_published_at": "2026-10-15T16:02:09Z",
+   "item_label": "Sealed item A",
+   "prior_event_fingerprint": "0000000000000000000000000000000000000000000000000000000000000000",
+   "reveal_fingerprint": "8e64f1c2c6a3c3e898cbbf084792079694ec8d0432508beb93273a6163ed4d8c",
+   "schema": "cycle-record-opening/1",
+   "event_fingerprint": "ab2714da3c3809bb129a9798df04399a63a1068fb6169dde48a47ca1aaa66bf4"
+  },
+  {
+   "entry_seq": 2,
+   "event_seq": 2,
+   "first_published_at": "2026-10-15T16:02:09Z",
+   "item_label": "Sealed item A",
+   "prior_event_fingerprint": "ab2714da3c3809bb129a9798df04399a63a1068fb6169dde48a47ca1aaa66bf4",
+   "reveal_fingerprint": "5a873132c262552edae9fe9a5386cc9a5e12fcd8c30064e35eb6f3637830a9e8",
+   "schema": "cycle-record-opening/1",
+   "event_fingerprint": "bb18bf1ad3c7558c456e6fcecd0454f3204da9317f4bb42457a3fe87a485864a"
+  }
+ ],
+ "openings_meta": {
+  "schema": "cycle-record-opening-list/1",
+  "count": 2,
+  "head_fingerprint": "bb18bf1ad3c7558c456e6fcecd0454f3204da9317f4bb42457a3fe87a485864a"
+ },
+ "study": [],
+ "instrument": {
+  "schema": "cardcycles-instrument/1",
+  "methods": "/methods/",
+  "attention": {
+   "source": "Wikimedia Foundation pageviews",
+   "project": "English Wikipedia",
+   "article": "Pokémon Trading Card Game",
+   "agent": "user",
+   "license": "CC0",
+   "months": [
+    {
+     "month": "2015-07",
+     "days": 31,
+     "views": 23262
+    },
+    {
+     "month": "2015-08",
+     "days": 31,
+     "views": 23589
+    },
+    {
+     "month": "2015-09",
+     "days": 30,
+     "views": 22680
+    },
+    {
+     "month": "2015-10",
+     "days": 31,
+     "views": 21624
+    },
+    {
+     "month": "2015-11",
+     "days": 30,
+     "views": 22140
+    },
+    {
+     "month": "2015-12",
+     "days": 31,
+     "views": 27163
+    },
+    {
+     "month": "2016-01",
+     "days": 31,
+     "views": 25292
+    },
+    {
+     "month": "2016-02",
+     "days": 29,
+     "views": 26830
+    },
+    {
+     "month": "2016-03",
+     "days": 31,
+     "views": 28140
+    },
+    {
+     "month": "2016-04",
+     "days": 30,
+     "views": 23477
+    },
+    {
+     "month": "2016-05",
+     "days": 31,
+     "views": 24990
+    },
+    {
+     "month": "2016-06",
+     "days": 30,
+     "views": 22182
+    },
+    {
+     "month": "2016-07",
+     "days": 31,
+     "views": 72193
+    },
+    {
+     "month": "2016-08",
+     "days": 31,
+     "views": 53907
+    },
+    {
+     "month": "2016-09",
+     "days": 30,
+     "views": 38374
+    },
+    {
+     "month": "2016-10",
+     "days": 31,
+     "views": 35590
+    },
+    {
+     "month": "2016-11",
+     "days": 30,
+     "views": 36352
+    },
+    {
+     "month": "2016-12",
+     "days": 31,
+     "views": 34746
+    },
+    {
+     "month": "2017-01",
+     "days": 31,
+     "views": 29112
+    },
+    {
+     "month": "2017-02",
+     "days": 28,
+     "views": 29081
+    },
+    {
+     "month": "2017-03",
+     "days": 31,
+     "views": 30696
+    },
+    {
+     "month": "2017-04",
+     "days": 30,
+     "views": 22579
+    },
+    {
+     "month": "2017-05",
+     "days": 31,
+     "views": 20230
+    },
+    {
+     "month": "2017-06",
+     "days": 30,
+     "views": 17238
+    },
+    {
+     "month": "2017-07",
+     "days": 31,
+     "views": 17569
+    },
+    {
+     "month": "2017-08",
+     "days": 31,
+     "views": 17054
+    },
+    {
+     "month": "2017-09",
+     "days": 30,
+     "views": 16296
+    },
+    {
+     "month": "2017-10",
+     "days": 31,
+     "views": 16376
+    },
+    {
+     "month": "2017-11",
+     "days": 30,
+     "views": 19064
+    },
+    {
+     "month": "2017-12",
+     "days": 31,
+     "views": 20707
+    },
+    {
+     "month": "2018-01",
+     "days": 31,
+     "views": 18293
+    },
+    {
+     "month": "2018-02",
+     "days": 28,
+     "views": 16721
+    },
+    {
+     "month": "2018-03",
+     "days": 31,
+     "views": 18950
+    },
+    {
+     "month": "2018-04",
+     "days": 30,
+     "views": 18554
+    },
+    {
+     "month": "2018-05",
+     "days": 31,
+     "views": 20630
+    },
+    {
+     "month": "2018-06",
+     "days": 30,
+     "views": 17417
+    },
+    {
+     "month": "2018-07",
+     "days": 31,
+     "views": 18564
+    },
+    {
+     "month": "2018-08",
+     "days": 31,
+     "views": 19430
+    },
+    {
+     "month": "2018-09",
+     "days": 30,
+     "views": 18159
+    },
+    {
+     "month": "2018-10",
+     "days": 31,
+     "views": 18297
+    },
+    {
+     "month": "2018-11",
+     "days": 30,
+     "views": 21309
+    },
+    {
+     "month": "2018-12",
+     "days": 31,
+     "views": 22030
+    },
+    {
+     "month": "2019-01",
+     "days": 31,
+     "views": 20857
+    },
+    {
+     "month": "2019-02",
+     "days": 28,
+     "views": 19565
+    },
+    {
+     "month": "2019-03",
+     "days": 31,
+     "views": 22658
+    },
+    {
+     "month": "2019-04",
+     "days": 30,
+     "views": 22105
+    },
+    {
+     "month": "2019-05",
+     "days": 31,
+     "views": 31849
+    },
+    {
+     "month": "2019-06",
+     "days": 30,
+     "views": 27267
+    },
+    {
+     "month": "2019-07",
+     "days": 31,
+     "views": 23173
+    },
+    {
+     "month": "2019-08",
+     "days": 31,
+     "views": 24495
+    },
+    {
+     "month": "2019-09",
+     "days": 30,
+     "views": 24277
+    },
+    {
+     "month": "2019-10",
+     "days": 31,
+     "views": 28322
+    },
+    {
+     "month": "2019-11",
+     "days": 30,
+     "views": 29123
+    },
+    {
+     "month": "2019-12",
+     "days": 31,
+     "views": 30183
+    },
+    {
+     "month": "2020-01",
+     "days": 31,
+     "views": 28282
+    },
+    {
+     "month": "2020-02",
+     "days": 29,
+     "views": 24910
+    },
+    {
+     "month": "2020-03",
+     "days": 31,
+     "views": 24579
+    },
+    {
+     "month": "2020-04",
+     "days": 30,
+     "views": 22628
+    },
+    {
+     "month": "2020-05",
+     "days": 31,
+     "views": 21203
+    },
+    {
+     "month": "2020-06",
+     "days": 30,
+     "views": 19225
+    },
+    {
+     "month": "2020-07",
+     "days": 31,
+     "views": 22720
+    },
+    {
+     "month": "2020-08",
+     "days": 31,
+     "views": 26523
+    },
+    {
+     "month": "2020-09",
+     "days": 30,
+     "views": 22752
+    },
+    {
+     "month": "2020-10",
+     "days": 31,
+     "views": 39068
+    },
+    {
+     "month": "2020-11",
+     "days": 30,
+     "views": 37596
+    },
+    {
+     "month": "2020-12",
+     "days": 31,
+     "views": 37878
+    },
+    {
+     "month": "2021-01",
+     "days": 31,
+     "views": 32799
+    },
+    {
+     "month": "2021-02",
+     "days": 28,
+     "views": 32639
+    },
+    {
+     "month": "2021-03",
+     "days": 31,
+     "views": 35151
+    },
+    {
+     "month": "2021-04",
+     "days": 30,
+     "views": 26846
+    },
+    {
+     "month": "2021-05",
+     "days": 31,
+     "views": 27228
+    },
+    {
+     "month": "2021-06",
+     "days": 30,
+     "views": 24711
+    },
+    {
+     "month": "2021-07",
+     "days": 31,
+     "views": 23204
+    },
+    {
+     "month": "2021-08",
+     "days": 31,
+     "views": 21871
+    },
+    {
+     "month": "2021-09",
+     "days": 30,
+     "views": 24050
+    },
+    {
+     "month": "2021-10",
+     "days": 31,
+     "views": 24182
+    },
+    {
+     "month": "2021-11",
+     "days": 30,
+     "views": 22730
+    },
+    {
+     "month": "2021-12",
+     "days": 31,
+     "views": 23936
+    },
+    {
+     "month": "2022-01",
+     "days": 31,
+     "views": 26883
+    },
+    {
+     "month": "2022-02",
+     "days": 28,
+     "views": 23591
+    },
+    {
+     "month": "2022-03",
+     "days": 31,
+     "views": 23432
+    },
+    {
+     "month": "2022-04",
+     "days": 30,
+     "views": 23419
+    },
+    {
+     "month": "2022-05",
+     "days": 31,
+     "views": 21597
+    },
+    {
+     "month": "2022-06",
+     "days": 30,
+     "views": 22974
+    },
+    {
+     "month": "2022-07",
+     "days": 31,
+     "views": 23923
+    },
+    {
+     "month": "2022-08",
+     "days": 31,
+     "views": 23799
+    },
+    {
+     "month": "2022-09",
+     "days": 30,
+     "views": 25730
+    },
+    {
+     "month": "2022-10",
+     "days": 31,
+     "views": 27598
+    },
+    {
+     "month": "2022-11",
+     "days": 30,
+     "views": 27962
+    },
+    {
+     "month": "2022-12",
+     "days": 31,
+     "views": 31796
+    },
+    {
+     "month": "2023-01",
+     "days": 31,
+     "views": 35836
+    },
+    {
+     "month": "2023-02",
+     "days": 28,
+     "views": 26122
+    },
+    {
+     "month": "2023-03",
+     "days": 31,
+     "views": 29069
+    },
+    {
+     "month": "2023-04",
+     "days": 30,
+     "views": 27159
+    },
+    {
+     "month": "2023-05",
+     "days": 31,
+     "views": 25230
+    },
+    {
+     "month": "2023-06",
+     "days": 30,
+     "views": 22528
+    },
+    {
+     "month": "2023-07",
+     "days": 31,
+     "views": 23013
+    },
+    {
+     "month": "2023-08",
+     "days": 31,
+     "views": 28178
+    },
+    {
+     "month": "2023-09",
+     "days": 30,
+     "views": 27330
+    },
+    {
+     "month": "2023-10",
+     "days": 31,
+     "views": 29184
+    },
+    {
+     "month": "2023-11",
+     "days": 30,
+     "views": 29488
+    },
+    {
+     "month": "2023-12",
+     "days": 31,
+     "views": 29486
+    },
+    {
+     "month": "2024-01",
+     "days": 31,
+     "views": 26285
+    },
+    {
+     "month": "2024-02",
+     "days": 29,
+     "views": 22294
+    },
+    {
+     "month": "2024-03",
+     "days": 31,
+     "views": 24553
+    },
+    {
+     "month": "2024-04",
+     "days": 30,
+     "views": 21123
+    },
+    {
+     "month": "2024-05",
+     "days": 31,
+     "views": 21622
+    },
+    {
+     "month": "2024-06",
+     "days": 30,
+     "views": 20185
+    },
+    {
+     "month": "2024-07",
+     "days": 31,
+     "views": 20148
+    },
+    {
+     "month": "2024-08",
+     "days": 31,
+     "views": 23227
+    },
+    {
+     "month": "2024-09",
+     "days": 30,
+     "views": 24634
+    },
+    {
+     "month": "2024-10",
+     "days": 31,
+     "views": 28149
+    },
+    {
+     "month": "2024-11",
+     "days": 30,
+     "views": 46848
+    },
+    {
+     "month": "2024-12",
+     "days": 31,
+     "views": 36756
+    },
+    {
+     "month": "2025-01",
+     "days": 31,
+     "views": 32573
+    },
+    {
+     "month": "2025-02",
+     "days": 28,
+     "views": 29181
+    },
+    {
+     "month": "2025-03",
+     "days": 31,
+     "views": 33097
+    },
+    {
+     "month": "2025-04",
+     "days": 30,
+     "views": 26591
+    },
+    {
+     "month": "2025-05",
+     "days": 31,
+     "views": 26557
+    },
+    {
+     "month": "2025-06",
+     "days": 30,
+     "views": 24394
+    },
+    {
+     "month": "2025-07",
+     "days": 31,
+     "views": 24797
+    },
+    {
+     "month": "2025-08",
+     "days": 31,
+     "views": 26400
+    },
+    {
+     "month": "2025-09",
+     "days": 30,
+     "views": 23712
+    },
+    {
+     "month": "2025-10",
+     "days": 31,
+     "views": 24287
+    },
+    {
+     "month": "2025-11",
+     "days": 30,
+     "views": 23502
+    },
+    {
+     "month": "2025-12",
+     "days": 31,
+     "views": 27987
+    },
+    {
+     "month": "2026-01",
+     "days": 31,
+     "views": 26330
+    },
+    {
+     "month": "2026-02",
+     "days": 28,
+     "views": 33498
+    },
+    {
+     "month": "2026-03",
+     "days": 31,
+     "views": 39446
+    },
+    {
+     "month": "2026-04",
+     "days": 30,
+     "views": 33860
+    },
+    {
+     "month": "2026-05",
+     "days": 31,
+     "views": 32480
+    },
+    {
+     "month": "2026-06",
+     "days": 30,
+     "views": 27864
+    },
+    {
+     "month": "2026-07",
+     "days": 31,
+     "views": 29202
+    },
+    {
+     "month": "2026-08",
+     "days": 31,
+     "views": 32174
+    },
+    {
+     "month": "2026-09",
+     "days": 30,
+     "views": 29706
+    }
+   ]
+  },
+  "printed_supply": {
+   "status": "held until verified"
+  }
+ }
+}

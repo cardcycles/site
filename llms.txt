@@ -1,0 +1,14 @@
+# CardCycles
+License: not yet set.
+Home: / — the instrument: Series A public attention, Series S held printed supply, Series R the weekly record.
+Record: /record/ — exact entry files, SHA-256 chain and timestamp status; /record/NNNN/ shows sealed evidence, its two-point comparison when available, proof status and receipt.
+Principles: /principles/ — five rules for keeping the record.
+Methods: /methods/ — exact sources, units, formulas and limits.
+Verify: /verify/ — check an entry fingerprint or saved copy.
+Legal: /legal/
+Feed: /feed.xml
+Machine record: /record.json
+Source attribution and license: /methods/#series-a.
+No independent timestamp is claimed unless its entry status is verified.
+CardCycles provides educational market analytics and risk intelligence, not financial, investment, tax, or legal advice. CardCycles is unofficial and is not affiliated with The Pokémon Company, Nintendo, Creatures, or Game Freak.
+Founding readers: join the email list on Home or Record.
