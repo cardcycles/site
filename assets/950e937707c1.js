@@ -18,24 +18,51 @@ try { localStorage.setItem('cardcycles_theme', next); } catch (e) {}
 label();
 });
 if (window.matchMedia) { try { window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', label); } catch (e) {} }
-var mb = document.getElementById('menubtn'), sheet = document.getElementById('sheet');
-function setMenu(open) {
+var mb = document.getElementById('menubtn'), bb = document.getElementById('barmenubtn');
+var sheet = document.getElementById('sheet'), bar = document.querySelector('[data-status-bar]'), opener = null;
+var menuButtons = [mb, bb].filter(Boolean);
+function isPinned() { return !!(bar && bar.classList.contains('is-pinned')); }
+function setMenu(open, trigger, unpin) {
+var hadFocus = sheet && sheet.contains(document.activeElement);
+if (open) opener = trigger;
 d.classList.toggle('menu-open', open);
+d.classList.toggle('bar-menu-open', open && isPinned());
 if (sheet) sheet.hidden = !open;
-mb.setAttribute('aria-expanded', open ? 'true' : 'false');
-var menuLabel = mb.querySelector && mb.querySelector('[data-menu-label]');
+menuButtons.forEach(function (button) {
+button.setAttribute('aria-expanded', open ? 'true' : 'false');
+var menuLabel = button.querySelector && button.querySelector('[data-menu-label]');
 if (menuLabel) menuLabel.textContent = open ? C.menu_close : C.menu_open;
-else mb.textContent = open ? C.menu_close : C.menu_open;
-}
-if (mb) mb.addEventListener('click', function () { setMenu(!d.classList.contains('menu-open')); });
-if (mb && sheet) sheet.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('a')) setMenu(false); });
-document.addEventListener('pointerdown', function (e) {
-if (mb && sheet && d.classList.contains('menu-open') && !sheet.contains(e.target) && !mb.contains(e.target)) setMenu(false);
+else button.textContent = open ? C.menu_close : C.menu_open;
 });
+if (open && trigger === bb && sheet) {
+var firstLink = sheet.querySelector('a[href]');
+if (firstLink) firstLink.focus({preventScroll:true});
+}
+if (!open && opener) {
+var target = unpin ? (hadFocus ? mb : null) : opener;
+if (target && (!target.getClientRects().length || getComputedStyle(target).visibility === 'hidden')) target = hadFocus ? tb : null;
+if (target) target.focus({preventScroll:true});
+opener = null;
+}
+}
+menuButtons.forEach(function (button) { button.addEventListener('click', function () { setMenu(!d.classList.contains('menu-open'), button); }); });
+if (mb && sheet) sheet.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('a')) setMenu(false); });
+var swallowUntil = 0;
+document.addEventListener('pointerdown', function (e) {
+if (sheet && d.classList.contains('menu-open') && !sheet.contains(e.target) && !menuButtons.some(function (button) { return button.contains(e.target); })) {
+swallowUntil = d.classList.contains('bar-menu-open') ? e.timeStamp + 800 : 0;
+setMenu(false);
+}
+});
+document.addEventListener('click', function (e) { if (e.timeStamp < swallowUntil) { swallowUntil = 0; e.preventDefault(); e.stopPropagation(); } }, true);
 var wideMenu = window.matchMedia('(min-width:60em)');
-wideMenu.addEventListener('change', function (e) { if (e.matches && mb) setMenu(false); });
+wideMenu.addEventListener('change', function (e) { if (e.matches && !isPinned()) setMenu(false); });
+if (bar) bar.addEventListener('statuspinchange', function (e) {
+if (!e.detail.pinned) setMenu(false, null, true);
+else if (d.classList.contains('menu-open')) d.classList.add('bar-menu-open');
+});
 document.addEventListener('keydown', function (e) {
-if (e.key === 'Escape' && d.classList.contains('menu-open') && mb) { setMenu(false); mb.focus(); }
+if (e.key === 'Escape' && d.classList.contains('menu-open')) setMenu(false);
 });
 var rv = document.querySelectorAll('[data-reveal]');
 for (var ri = 0; ri < rv.length; ri++) rv[ri].hidden = false;
@@ -62,13 +89,14 @@ document.addEventListener('toggle',syncScrollerTargets,true);
 function syncActionGroups() {
 document.querySelectorAll('.all-or-stack').forEach(function (group) {
 var buttons = Array.from(group.children), gap = parseFloat(getComputedStyle(group).columnGap) || 0;
-var width = gap * Math.max(0, buttons.length - 1);
+var widest = 0;
 buttons.forEach(function (button) {
 var saved = button.style.cssText;
 button.style.cssText += ';width:max-content;flex:none;white-space:nowrap';
-width += button.getBoundingClientRect().width;
+widest = Math.max(widest, button.getBoundingClientRect().width);
 button.style.cssText = saved;
 });
+var width = widest * buttons.length + gap * Math.max(0, buttons.length - 1);
 group.classList.toggle('actions-row', width <= group.clientWidth + .5);
 });
 }
@@ -183,6 +211,13 @@ var sentinel = document.querySelector('[data-status-sentinel]');
 if (!bar || !sentinel) return;
 var pinned = false;
 var first = true;
+var controls = bar.querySelector('.i-status-controls');
+function measure() {
+document.documentElement.style.setProperty('--status-bar-height', bar.getBoundingClientRect().height + 'px');
+}
+measure();
+if ('ResizeObserver' in window) new ResizeObserver(measure).observe(bar);
+else window.addEventListener('resize', measure);
 bar.classList.add('no-anim');
 var observer = new window.IntersectionObserver(function (entries) {
 entries.forEach(function (entry) {
@@ -190,7 +225,10 @@ if (entry.target !== sentinel) return;
 var edge = entry.boundingClientRect.bottom;
 if (!pinned && edge <= 0) pinned = true;
 else if (pinned && edge >= 8) pinned = false;
+var changed = bar.classList.contains('is-pinned') !== pinned;
 bar.classList.toggle('is-pinned', pinned);
+if (controls) controls.inert = !pinned;
+if (changed) bar.dispatchEvent(new CustomEvent('statuspinchange', {detail: {pinned: pinned}}));
 if (first) { first = false; requestAnimationFrame(function () { requestAnimationFrame(function () { bar.classList.remove('no-anim'); }); }); }
 });
 }, {threshold: [0, 1]});
@@ -216,7 +254,7 @@ if (!main || !footer) return;
 var bands = document.querySelectorAll('body>.hdr,body>.i-status,body>.review,body>.sheet,body>.ftr');
 function fit() {
 var h = 0;
-bands.forEach(function (b) { h += b.getBoundingClientRect().height; });
+bands.forEach(function (b) { if (getComputedStyle(b).position !== 'fixed') h += b.getBoundingClientRect().height; });
 main.style.setProperty('--shell-height', h + 'px');
 }
 fit();

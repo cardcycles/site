@@ -1,9 +1,82 @@
 {
  "schema": "cycle-record-list/1",
- "generated_on": "2026-10-15",
+ "generated_on": "2026-10-19",
  "note": "The Cycle Record. Each entry's fingerprint is the SHA-256 of record/NNNN/entry.json. Anyone may keep copies.",
  "disclaimer": "CardCycles provides educational market analytics and risk intelligence, not financial, investment, tax, or legal advice. CardCycles is unofficial and is not affiliated with The Pokémon Company, Nintendo, Creatures, or Game Freak.",
  "entries": [
+  {
+   "schema": "cycle-record-envelope/1",
+   "seq": 3,
+   "entry": {
+    "corrects": null,
+    "missed_weeks": [],
+    "notes": [
+     "INSUFFICIENT_DATA"
+    ],
+    "prev_chain_hash": "62bac39e300ef04cd69efe4ac9a2da80d58191d60eb5d0f87b7a8dd004372904",
+    "schema": "cycle-record/1",
+    "sealed_at": "2026-10-19T21:13:41Z",
+    "sealed_items": [
+     {
+      "label": "Sealed item A",
+      "sha256": "32f40955afa4f4f86824881951bba992e728ed753df1d8a9d69050f4b63010ca"
+     },
+     {
+      "label": "Sealed item B",
+      "sha256": "7a23c0664da3ec1d7a161ac363a552d754515a8b1e5f4706489063770f12cd89"
+     },
+     {
+      "label": "Sealed item C",
+      "sha256": "38e54082868dc516389070c70e3e1ba3932ce73ea9478d6c196625bd5a016984"
+     },
+     {
+      "label": "Private seal",
+      "sha256": "47fbc0b22305268216f7d30aeb6dd7344a9415646132cbe084074e28e2b27030"
+     }
+    ],
+    "seq": 3,
+    "week_start": "2026-10-19"
+   },
+   "entry_hash": "c86d6b9b71895da3211ebec37bb11d383938edc6b51bba3937718b6dc1c9816a",
+   "chain_hash": "309600439db1b4347d292551810143dba99becb7d3cd3f672dd742e1182f5021",
+   "public_context": {
+    "public_interest": {
+     "item": "Sealed item A",
+     "opened": {
+      "content": {
+       "agent": "user",
+       "article": "Pokémon Trading Card Game",
+       "avg_daily_views": 990,
+       "change_pct": "+25.3",
+       "compare_avg_daily_views": 790,
+       "compare_month": "2025-09",
+       "data_through": "2026-10-18",
+       "license": "CC0",
+       "month": "2026-09",
+       "project": "en.wikipedia",
+       "reading": "public_interest",
+       "source": "Wikimedia pageviews"
+      },
+      "salt": "3935ee6262b8efd4a434b9ab1bbb34ef08cb04b9ae303c200cbe1c66defb81fb"
+     },
+     "publication_status": "published"
+    }
+   },
+   "timestamp_proof": {
+    "file": "entry.json.ots",
+    "state": "complete",
+    "requested_on": "2026-10-19",
+    "completed_on": "2026-10-19",
+    "verified_on": "2026-10-19",
+    "attested_at": "2026-10-19T21:35:13Z",
+    "pending_reason": null,
+    "verification": "verified",
+    "entry_sha256": "c86d6b9b71895da3211ebec37bb11d383938edc6b51bba3937718b6dc1c9816a",
+    "proof_sha256": "70e910591e96247632d317cb29f269b6fd1de5c93775ad0c5d1ad9670c6731e2"
+   },
+   "study": [],
+   "disclaimer": "CardCycles provides educational market analytics and risk intelligence, not financial, investment, tax, or legal advice. CardCycles is unofficial and is not affiliated with The Pokémon Company, Nintendo, Creatures, or Game Freak."
+  },
   {
    "schema": "cycle-record-envelope/1",
    "seq": 2,
@@ -171,12 +244,22 @@
    "reveal_fingerprint": "5a873132c262552edae9fe9a5386cc9a5e12fcd8c30064e35eb6f3637830a9e8",
    "schema": "cycle-record-opening/1",
    "event_fingerprint": "bb18bf1ad3c7558c456e6fcecd0454f3204da9317f4bb42457a3fe87a485864a"
+  },
+  {
+   "entry_seq": 3,
+   "event_seq": 3,
+   "first_published_at": "2026-10-19T23:48:45Z",
+   "item_label": "Sealed item A",
+   "prior_event_fingerprint": "bb18bf1ad3c7558c456e6fcecd0454f3204da9317f4bb42457a3fe87a485864a",
+   "reveal_fingerprint": "32f40955afa4f4f86824881951bba992e728ed753df1d8a9d69050f4b63010ca",
+   "schema": "cycle-record-opening/1",
+   "event_fingerprint": "b6caf9389d28fa0b37978fe7ca9bcd468ea0c67d5b0002ec9fc6d272f1e305eb"
   }
  ],
  "openings_meta": {
   "schema": "cycle-record-opening-list/1",
-  "count": 2,
-  "head_fingerprint": "bb18bf1ad3c7558c456e6fcecd0454f3204da9317f4bb42457a3fe87a485864a"
+  "count": 3,
+  "head_fingerprint": "b6caf9389d28fa0b37978fe7ca9bcd468ea0c67d5b0002ec9fc6d272f1e305eb"
  },
  "study": [],
  "instrument": {
