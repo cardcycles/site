@@ -2,7 +2,7 @@
 License: not yet set.
 Home: / — the instrument: Series A public attention, Series S held printed supply, Series R the weekly record.
 Record: /record/ — exact entry files, SHA-256 chain and timestamp status; /record/NNNN/ shows sealed evidence, its two-point comparison when available, proof status and receipt.
-Principles: /principles/ — five rules for keeping the record.
+Research standards: /principles/ — the standards governing our public analysis and weekly record.
 Methods: /methods/ — exact sources, units, formulas and limits.
 Verify: /verify/ — check an entry fingerprint or saved copy.
 Legal: /legal/

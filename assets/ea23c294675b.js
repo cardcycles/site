@@ -251,7 +251,7 @@ else if (r >= 0.98 && seal.classList.contains('seal-ready')) seal.classList.add(
 'use strict';
 var main = document.querySelector('body>main'), footer = document.querySelector('.ftr-seal');
 if (!main || !footer) return;
-var bands = document.querySelectorAll('body>.hdr,body>.i-status,body>.review,body>.sheet,body>.ftr');
+var bands = document.querySelectorAll('body>.hdr,body>.i-status,body>.review,body>section>.review,body>.sheet,body>.ftr,body>.ftr-seal');
 function fit() {
 var h = 0;
 bands.forEach(function (b) { if (getComputedStyle(b).position !== 'fixed') h += b.getBoundingClientRect().height; });
